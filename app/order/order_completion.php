@@ -23,7 +23,7 @@ if(isset($_GET['success'])) {
 			$payment = executePayment($order['payment_id'], $_GET['PayerID']);
 			updateOrder($orderId, $payment->getState());
 			$messageType = "success";
-			$message = "Your payment was successful.";
+			$message = "Your payment was successful. Your order id is $orderId.";
 		} catch (PPConnectionException $ex) {
 			$message = parseApiError($ex->getData());
 			$messageType = "error";

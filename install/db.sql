@@ -10,9 +10,9 @@ CREATE TABLE `ppusers` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS pporders;
 
-CREATE TABLE `orders` (
+CREATE TABLE `pporders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` varchar(20) DEFAULT NULL,
   `payment_id` varchar(50) DEFAULT NULL,

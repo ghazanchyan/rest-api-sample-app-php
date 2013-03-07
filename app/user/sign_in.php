@@ -9,16 +9,15 @@ unset($errorMessage);
 // Sign in form postback
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	try {
-		$isValid = validateLogin($_POST['user']['email'], $_POST['user']['password']);
+		if(validateLogin($_POST['user']['email'], $_POST['user']['password'])) {
+			signIn($_POST['user']['email']);
+			header("Location: ../index.php");
+			exit;
+		} else {
+			$errorMessage = "Login failed. Please check your username/password";
+		}		
 	} catch (Exception $ex) {
 		$errorMessage = $ex->getMessage();
-	}
-	if(isset($isValid) && $isValid != false) {
-		signIn($_POST['user']['email']);
-		header("Location: ../index.php");
-		exit;
-	} else {
-		$errorMessage = "Login failed. Please check your username/password";
 	}
 }
 ?>
