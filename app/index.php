@@ -193,6 +193,17 @@ $message = isset($_GET['message']) ? $_GET['message'] : NULL;
           </div>
         </div>
       </div>
+	  <br/><br/><br/>
+      <div class="row">
+		  <div class="span6 offset3">
+	   	    <p>This is a sample application which showcases the new PayPal REST APIs. The app uses mock data to demonstrate how you can use the REST APIs for</p>
+			<ul>
+				<li>Saving credit card information with PayPal for later use.</li>
+				<li>Making payments using a saved credit card.</li>
+				<li>Making payments using PayPal.</li>
+			</ul>
+			</div>
+      </div>
     </div>
     <?php include './footer.php';?>
     <script src="../public/js/application.js" type="text/javascript"></script>

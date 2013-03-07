@@ -53,6 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class='container' id='content'>
       
       <h2>Sign up</h2>
+	  <p>Sign up for a new PizzaShop account.</p>
       <?php if(isset($errorMessage)) {?>
 		<div class="alert fade in alert-error">
 			<button class="close" data-dismiss="alert">&times;</button>
@@ -61,10 +62,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<?php }?>
       <form accept-charset="UTF-8" action="./sign_up.php" autocomplete="off" class="simple_form form-horizontal new_user" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="vpVuNuIt9fRZzLm0eE0gk4h249k0nZPB/WEXWn9ETwg=" /></div>
         
-        <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user[email]" size="50" type="email" value="" /></div></div>
+        <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user[email]" size="50" type="email" value="" placeholder="dummy@email.com"/></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password"><abbr title="required">*</abbr> Password</label><div class="controls"><input class="password required" id="user_password" name="user[password]" size="50" type="password" /></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password_confirmation"><abbr title="required">*</abbr> Password confirmation</label><div class="controls"><input class="password required" id="user_password_confirmation" name="user[password_confirmation]" size="50" type="password" /></div></div>
-        <legend>Add Credit Card</legend>
+        <legend>Add Credit Card (Optional)</legend>
+		<p>Your credit card information is stored safely with PayPal.</p>
         <div class="control-group select required"><label class="select required control-label" for="user_credit_card_type"><abbr title="required">*</abbr> Type</label><div class="controls"><select class="select required" id="user_credit_card_type" name="user[credit_card][type]"><option value=""></option>
         <option value="visa">visa</option>
         <option value="mastercard">mastercard</option>

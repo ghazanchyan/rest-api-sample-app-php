@@ -45,6 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<?php include '../navbar.php';?>
 	<div class='container' id='content'>
 		<h2>Sign in</h2>
+		<p>Sign in with your PizzaShop account. Don't have an account yet? <a href="../user/sign_up.php">Sign up</a> for one.</p>
 		<?php if(isset($errorMessage)) {?>
 		<div class="alert fade in alert-error">
 			<button class="close" data-dismiss="alert">&times;</button>
@@ -58,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<label class="email optional control-label" for="user_email">Email</label>
 				<div class="controls">
 					<input autofocus="autofocus" class="string email optional"
-						id="user_email" name="user[email]" size="50" type="email" value="" />
+						id="user_email" name="user[email]" size="50" type="email" value="" placeholder="dummy@email.com"/>
 				</div>
 			</div>
 			<div class="control-group password optional">
@@ -73,7 +74,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 					value="Sign in" />
 			</div>
 		</form>
-		<a href="../user/sign_up.php">Sign up</a><br />
 	</div>
 	<?php include '../footer.php';?>
 	<script src="../../public/js/application.js" type="text/javascript"></script>

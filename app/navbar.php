@@ -11,10 +11,10 @@ $basePath = (strstr($_SERVER['PHP_SELF'], "/index.php")) ? "." : "..";
 			<ul class='nav pull-right'>
 				<?php if(isSignedIn()) {?>
 				<li><a href="<?php echo $basePath;?>/user/profile.php">Profile</a></li>
-				<li><a href="<?php echo $basePath;?>/user/sign_out.php">SignOut</a></li>
+				<li><a href="<?php echo $basePath;?>/user/sign_out.php">Sign out</a></li>
 				<?php } else {?>
-				<li><a href="<?php echo $basePath;?>/user/sign_in.php">SignIn</a></li>
-				<li><a href="<?php echo $basePath;?>/user/sign_up.php">SignUp</a></li>
+				<li><a href="<?php echo $basePath;?>/user/sign_in.php">Sign in</a></li>
+				<li><a href="<?php echo $basePath;?>/user/sign_up.php">Sign up</a></li>
 				<?php }?>
 			</ul>
 			<a class='brand' href='#'>PizzaShop</a>
