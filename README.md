@@ -1,10 +1,10 @@
-Pizza App using PayPal RESTful API
-==================================
+Pizza App using PayPal REST API
+===============================
 
 Overview
 --------
 
-This is a simple pizza store app that showcases the features of PayPal's RESTful APIs. The application uses the SDKs provided by PayPal.  The app demonstrates how you
+This is a simple pizza store app that showcases the features of PayPal's REST APIs. The application uses the SDKs provided by PayPal.  The app demonstrates how you
    
     * Save a credit card with paypal for future payments.
     * Make a payment using a saved credit card id.
@@ -32,6 +32,6 @@ Running the app
 References
 ----------
 
-   * RESTful API SDK repository - https://github.com/paypal/rest-api-sdk-php
+   * Github repository for PHP REST API SDK- https://github.com/paypal/rest-api-sdk-php
 
 	 
